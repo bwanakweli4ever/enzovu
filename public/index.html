@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enzovu - Exotic Go Framework</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Sriracha&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4ECDC4;
+            --secondary-color: #2C3E50;
+            --accent-color: #ECF0F1;
+            --background-color: #1a1a1a;
+            --text-color: #ffffff;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .background-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 25% 25%, var(--primary-color) 1%, transparent 1%),
+                radial-gradient(circle at 75% 75%, var(--accent-color) 1%, transparent 1%);
+            background-size: 60px 60px;
+            opacity: 0.05;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        .logo-container {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .logo {
+            width: 180px;
+            height: 180px;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .title-accent {
+            font-family: 'Sriracha', cursive;
+            color: var(--primary-color);
+        }
+        p {
+            font-size: 1.25rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            padding: 12px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-color);
+        }
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .feature {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: left;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+        .feature h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .feature p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            opacity: 0.7;
+        }
+        .version-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            .features {
+                flex-direction: column;
+            }
+            .logo {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="background-pattern"></div>
+        
+        <div class="content">
+            <div class="logo-container">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-MUP5bGMR8RSWiY1E7hySkM65S0RmTi.png" alt="Enzovu Logo" class="logo">
+                <span class="version-badge">v1.0.0</span>
+            </div>
+            <h1>
+                Unleash the Power of <span class="title-accent">Enzovu</span>
+            </h1>
+            <p>
+                A robust and elegant Go framework inspired by the strength and wisdom of elephants. 
+                Build powerful web applications with grace and efficiency.
+            </p>
+            <a href="#" class="cta-button">Get Started</a>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>Memory-Safe Architecture</h3>
+                    <p>Built with Go's strong type system and memory safety guarantees for rock-solid reliability.</p>
+                </div>
+                <div class="feature">
+                    <h3>Smart Routing</h3>
+                    <p>Intelligent request handling with minimal overhead and maximum flexibility.</p>
+                </div>
+                <div class="feature">
+                    <h3>Scalable by Design</h3>
+                    <p>From small projects to enterprise applications, scale with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function animateContent() {
+            const elements = document.querySelectorAll('.logo-container, h1, p, .cta-button, .feature');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                    el.style.transition = 'opacity 1s, transform 1s cubic-bezier(0.25, 0.4, 0.25, 1)';
+                }, 300 + index * 200);
+            });
+        }
+
+        window.addEventListener('load', animateContent);
+    </script>
+</body>
+</html>
