@@ -1,7 +1,3 @@
-Here’s a better-formatted version of your `enzovu` framework documentation:
-
----
-
 # Enzovu - Exotic Go Framework
 
 **Enzovu** is a robust and elegant Go framework inspired by the strength and wisdom of elephants. It is designed to build powerful web applications with grace and efficiency.
