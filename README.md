@@ -30,3 +30,28 @@ This framework follows a simplified MVC (Model-View-Controller) pattern, making 
 ```bash
 git clone https://github.com/bwanakweli4ever/enzovu.git
 cd enzovu
+
+
+Using the go-craft CLI Tool
+The go-craft CLI tool helps you create resources like models, controllers, and more for your application.
+
+
+1. Create a Model
+Use the following command to create a model (e.g., User):
+
+```bash
+go run cmd/go-craft.go create model User
+
+
+2. Create a Controller
+Use the following command to create a controller (e.g., User):
+
+```bash
+go run cmd/go-craft.go create controller User
+
+
+3. Create a Migration File
+Use the following command to create a migration file (e.g., create_users_table):
+
+```bash
+go run cmd/go-craft.go  create  migration  create_users_table
