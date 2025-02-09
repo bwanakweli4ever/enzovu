@@ -6,6 +6,6 @@ import (
 )
 
 func InitializeApp() {
-	fmt.Println("Initializing application...")
+	fmt.Println("Initializing Enzovu Framework...")
 	config.LoadConfig() // Load configurations
 }

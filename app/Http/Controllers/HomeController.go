@@ -3,6 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	models "enzovu/app/Models"
+	"enzovu/helpers"
 	"fmt"
 	"net/http"
 	"path/filepath"
@@ -29,4 +30,18 @@ func TestModel(w http.ResponseWriter, r *http.Request) {
 	// Write the user data to the response
 	json.NewEncoder(w).Encode(user)
 
+}
+
+type UserController struct{}
+
+// Index handles the user list view
+func (u *UserController) RenderView(w http.ResponseWriter, r *http.Request) {
+	// Sample data that might come from your model/database
+	users := []string{"Alice", "Bob", "Charlie"}
+	// Import the debug package from enzovu/helpers
+	// Debug the users data
+	helpers.Dd(w, users)
+
+	// Render the 'index' view with the users data
+	//views.Render(w, "hello", users)
 }

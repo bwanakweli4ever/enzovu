@@ -9,4 +9,6 @@ func RegisterWebRoutes() {
 	http.HandleFunc("/", controllers.Home)
 	http.HandleFunc("/about", controllers.About)
 	http.HandleFunc("/test-model", controllers.TestModel)
+	http.HandleFunc("/user", (&controllers.UserController{}).RenderView)
+	
 }
