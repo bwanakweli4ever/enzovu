@@ -65,7 +65,7 @@ func Get%s() *%s {
 		Email: "example@email.com",
 	}
 }
-`, name, name, name, name, name, name, name, name)
+`, name, name, name, name, name, name, name, name, name)
 
 	// Write the generated model content to the file
 	_, err = file.WriteString(modelContent)
