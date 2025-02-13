@@ -43,8 +43,8 @@ func createModel(name string) {
 	// Generic model content template
 	modelContent := fmt.Sprintf(`package models
 
-// %s represents the model for the %s resource.
-type %s struct {
+// %[1]s represents the model for the %[1]s resource.
+type %[1]s struct {
 	// ID is the primary identifier for the resource
 	ID    int    `+"`json:\"id\"`"+`
 
@@ -57,15 +57,15 @@ type %s struct {
 	// Add more fields as necessary (e.g., Description, CreatedAt, UpdatedAt)
 }
 
-// Get%s returns a sample %s instance
-func Get%s() *%s {
-	return &%s{
+// Get%[1]s returns a sample %[1]s instance
+func Get%[1]s() *%[1]s {
+	return &%[1]s{
 		ID:    1,
-		Name:  "Example %s",
+		Name:  "Example %[1]s",
 		Email: "example@email.com",
 	}
 }
-`, name, name, name, name, name, name, name, name)
+`, name)
 
 	// Write the generated model content to the file
 	_, err = file.WriteString(modelContent)
