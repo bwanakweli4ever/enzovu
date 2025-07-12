@@ -1,0 +1,11 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  cmd = "go run main.go"
+  exclude_dir = ["tmp", "vendor", "public", ".git"]
+  include_ext = ["go"]
+  delay = 1000
+
+[screen]
+  clear_on_rebuild = true

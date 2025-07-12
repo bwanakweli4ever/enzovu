@@ -45,3 +45,20 @@ func (u *UserController) RenderView(w http.ResponseWriter, r *http.Request) {
 	// Render the 'index' view with the users data
 	//views.Render(w, "hello", users)
 }
+
+func (u *UserController) Show(w http.ResponseWriter, r *http.Request) {
+	// Sample user data
+	user := map[string]string{
+		"name":  "John Doe",
+		"email": "john.doe@example.com",
+	}
+
+	json.NewEncoder(w).Encode(user)
+
+	// Import the debug package from enzovu/helpers
+	// Debug the user data
+	// helpers.Dd(w, user)
+
+	// Render the 'show' view with the user data
+
+}

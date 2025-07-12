@@ -1,3 +1,51 @@
-/vendor/
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+enzovu
+go-craft
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Dependency directories
+vendor/
 node_modules/
+
+# Environment files
 .env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
+logs/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Build files
+dist/
+build/
