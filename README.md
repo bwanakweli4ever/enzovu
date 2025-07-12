@@ -294,7 +294,7 @@ protected := router.Group("/admin", middleware.AuthMiddleware)
 
 ### Creating Custom Middleware
 ```bash
-go run cmd/go-craft.go create middleware CORS
+go run cmd/go-craft.go create middleware CORS. 
 ```
 
 Example middleware:
